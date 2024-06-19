@@ -1,4 +1,7 @@
 fun main() {
+
+    // Questions: https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/C
+
     val input = readLine()!!
 
     val (x, y) = input.trim().split("\\s+".toRegex()).map { it.toInt() }
