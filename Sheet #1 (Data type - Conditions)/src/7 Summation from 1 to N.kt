@@ -22,8 +22,6 @@ fun main() {
     // output
     // 55
 
-
-
 }
 
 
