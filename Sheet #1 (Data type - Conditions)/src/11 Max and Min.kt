@@ -1,30 +1,33 @@
-fun main(){
- // question: https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K
+fun main() {
+    // question: https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K
     val input = readln()
     val (a, b, c) = input.trim().split("\\s+".toRegex()).map { it.toInt() }
 
-    if (a < b && a < c){
-        print( "$a ")
-        if (b > c){
-            print(b)
+    if (a < b) {
+        if (a < c) {
+            print("$a ")
         } else {
-            print(c)
+            print("$c ")
         }
-    } else if (b < a && b < c){
+    } else if (b < c) {
         print("$b ")
-        if (a > c){
-            print(a)
-        } else {
-            print(c)
-        }
-    } else if (c < a && c < b) {
+    } else {
         print("$c ")
-        if (a > b) {
-            print(a)
-        } else {
-            print(b)
-        }
     }
+
+    if (a > b) {
+        if (a > c) {
+            print("$a")
+        } else {
+            print("$c")
+        }
+    } else if (b > c) {
+        print("$b")
+    } else {
+        print("$c")
+    }
+
+}
 
 // input
 // 1 2 3
@@ -45,4 +48,4 @@ fun main(){
 //----------
 // output
 // -5 20
-}
+
